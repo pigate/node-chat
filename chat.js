@@ -1,6 +1,7 @@
 net = require('net');
 
 var sockets = []; 
+var port = process.env.PORT || 5000;
 
 var s = net.Server(function(socket){
   sockets.push(socket);
@@ -19,6 +20,6 @@ var s = net.Server(function(socket){
   }); 
 });
 
-s.listen(8000);
+s.listen(port);
 
 //when data arrives, broadcast the data to our pool of sockets

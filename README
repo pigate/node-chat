@@ -1,0 +1,3 @@
+node chat.js
+
+nc $IP 8000
